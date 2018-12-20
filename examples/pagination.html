@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>pagination</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/ant-design-vue/dist/antd.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ant-design-vue/dist/antd.js"></script>
+    <script src="../dist/index.min.js"></script>
+  </head>
+  <body>
+    <div id='app'>
+      <a-pagination
+        :page-size-options="pageSizeOptions"
+        :total="total"
+        :show-size-changer="true"
+        :page-size="pageSize"
+        v-model="current"
+        v-on:show-size-change="onShowSizeChange"
+      >
+          <template slot='buildOptionText' slot-scope='props'>
+            <span v-if="props.value!=='50'">{{props.value}}条/页</span>
+            <span v-if="props.value==='50'">全部</span>
+          </template>
+        </a-pagination>
+    </div>
+  </body>
+  <script>
+    window.onload = function (params) {
+      Vue.use(antd)
+      Vue.use(dash_event)
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            pageSizeOptions: ['10', '20', '30', '40', '50'],
+            current: 1,
+            pageSize: 10,
+            total: 50,
+          }
+        },
+        methods: {
+          onShowSizeChange(current, pageSize) {
+            this.pageSize = pageSize
+            console.log(current, pageSize)
+          },
+        }
+      })
+    }
+  </script>
+  </html>

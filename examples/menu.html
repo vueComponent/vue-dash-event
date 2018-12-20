@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.jsdelivr.net/npm/ant-design-vue/dist/antd.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ant-design-vue/dist/antd.js"></script>
+    <script src="../dist/index.min.js"></script>
+  </head>
+  <body>
+    <div id='app'>
+        <a-menu
+          v-model="current"
+          mode="horizontal"
+          v-on:open-change="openChange"
+        >
+          <a-menu-item key="mail">
+            <a-icon type="mail"></a-icon>
+            Navigation One
+          </a-menu-item>
+          <a-menu-item key="app" disabled>
+            <a-icon type="appstore"></a-icon>
+            Navigation Two
+          </a-menu-item>
+          <a-sub-menu>
+            <span slot="title" class="submenu-title-wrapper"><a-icon type="setting"></a-icon>Navigation Three - Submenu</span>
+            <a-menu-item-group title="Item 1">
+              <a-menu-item key="setting:1">Option 1</a-menu-item>
+              <a-menu-item key="setting:2">Option 2</a-menu-item>
+            </a-menu-item-group>
+            <a-menu-item-group title="Item 2">
+              <a-menu-item key="setting:3">Option 3</a-menu-item>
+              <a-menu-item key="setting:4">Option 4</a-menu-item>
+            </a-menu-item-group>
+          </a-sub-menu>
+          <a-menu-item key="alipay">
+            <a href="https://ant.design" target="_blank" rel="noopener noreferrer">Navigation Four - Link</a>
+          </a-menu-item>
+        </a-menu>
+    </div>
+  </body>
+  <script>
+    window.onload = function (params) {
+      Vue.use(antd)
+      Vue.use(dash_event)
+      new Vue({
+        el: '#app',
+        data () {
+          return {
+            current: ['mail'],
+          }
+        },
+        methods: {
+          openChange(val) {
+            console.dir('当前是否显示：' + val)
+          }
+        }
+      })
+    }
+  </script>
+  </html>
