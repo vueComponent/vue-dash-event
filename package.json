@@ -1,5 +1,5 @@
 {
-  "name": "dash_event",
+  "name": "vue-dash-event",
   "version": "0.0.1",
   "description": "",
   "main": "./lib/index.js",
@@ -16,7 +16,20 @@
     "lib",
     "dist"
   ],
-  "author": "",
+  "keywords": [
+    "vue",
+    "camelCase",
+    "vue-dash-event"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangxueliang/vue-dash-event.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wangxueliang/vue-dash-event/issues"
+  },
+  "homepage": "https://github.com/wangxueliang/vue-dash-event",
+  "author": "wangxueliang",
   "license": "MIT",
   "eslintConfig": {
     "root": true,
