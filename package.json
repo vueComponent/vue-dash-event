@@ -23,12 +23,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangxueliang/vue-dash-event.git"
+    "url": "git+https://github.com/vueComponent/vue-dash-event.git"
   },
   "bugs": {
-    "url": "https://github.com/wangxueliang/vue-dash-event/issues"
+    "url": "https://github.com/vueComponent/vue-dash-event/issues"
   },
-  "homepage": "https://github.com/wangxueliang/vue-dash-event",
+  "homepage": "https://github.com/vueComponent/vue-dash-event.git",
   "author": "wangxueliang",
   "license": "MIT",
   "eslintConfig": {
