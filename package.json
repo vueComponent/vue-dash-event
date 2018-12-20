@@ -1,7 +1,7 @@
 {
   "name": "vue-dash-event",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "The library function, implemented in the DOM template, can use the custom event of the ant-design-vue component (camelCase)",
   "main": "./lib/index.js",
   "module": "./es/index.js",
   "scripts": {
