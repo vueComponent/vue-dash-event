@@ -6,12 +6,6 @@ The library function, implemented in the DOM template, can use the custom event 
 
 ## Usage
 
-```bash
-$ npm install vue-dash-event --save
-```
-
-or
-
 ```js
 <script src="https://cdn.jsdelivr.net/npm/vue-dash-event@1.0.1/dist/index.min.js"></script>
 <script>
@@ -19,6 +13,8 @@ Vue.use(window['vue-dash-event'])
 </script>
 ```
 ## Why
+
+### If you not use DOM templates, You don't need this plugin.
 
 Unlike components and props, event names don’t provide any automatic case transformation. Instead, the name of an emitted event must exactly match the name used to listen to that event. For example, if emitting a camelCased event name:
 
