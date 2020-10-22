@@ -30,12 +30,11 @@ dashEvent.install = function (Vue) {
       !cacheLowerCaseEvent[fnName] && 
       (cache[fnName] || hyphenateRE.test(fnName))
     ) {
-      _emit.call(this, fnName, ...params)
       _emit.call(this, hyphenate(fnName), ...params)
     } else {
       cacheLowerCaseEvent[fnName] = fnName
-      _emit.call(this, fnName, ...params)
     }
+    _emit.call(this, fnName, ...params)
   }
 }
 
